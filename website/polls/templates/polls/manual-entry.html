@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manual Entry Form</title>
+</head>
+<body>
+    <h1>Manual Entry</h1>
+    <form method="post" action="{% url 'polls:manual_entry' %}">
+        {% csrf_token %}
+        <label for="question_text">Question:</label>
+        <input type="text" id="question_text" name="question_text" required><br>
+
+        <label for="choice1">Choice 1:</label>
+        <input type="text" id="choice1" name="choice1" required><br>
+
+        <label for="choice2">Choice 2:</label>
+        <input type="text" id="choice2" name="choice2" required><br>
+
+        <label for="choice3">Choice 3:</label>
+        <input type="text" id="choice3" name="choice3" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
